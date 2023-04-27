@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75)), url("./images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.app .card {
+  width: 40%;
+  height: 35vh;
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+.card .text {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+}
+.card .text h2 {
+  line-height: 40px;
+  word-spacing: 1px;
+  font-size: 25px;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 500;
+  margin: 0px 0px;
+}
+.btn {
+  width: 100%;
+  height: 10vh;
+}
+.btn button {
+  display: block;
+  outline: none;
+  border: 1px solid rgba(22, 76, 167, 0.6);
+  margin: 0px auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: 35%;
+  text-align: center;
+  background: transparent;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  color: #164ca7;
+  letter-spacing: 0.7px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+@media only screen and (max-width: 1000px) {
+  .app .card {
+       width: 80%;
+       height: 40vh;
+   }
+   .card .text{
+    width: 100%;
+    height: 28vh;
+  }
+   .btn button{
+     width: 30%;
+   }
+ 
+ }
+@media only screen and (max-width: 600px) {
+ .app .card {
+      width: 90%;
+      height: 40vh;
+  }
+  .card .text{
+    width: 100%;
+    height: 30vh;
+  }
+  .btn{
+    height: 5vh;
+  }
+  .btn button{
+    width: 60%;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
